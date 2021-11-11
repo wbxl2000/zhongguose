@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'SourceHanSerifCN-Medium';
+  src: url('./fonts/SourceHanSerifCN-Medium.otf'); 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  font-family: 'SourceHanSerifCN-Medium';
+}
+
+.half {
+  width: 50%;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 95vh;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.function-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.color-canvas {
+  height: 100%;
+  width: 100%;
+  transition: background-color 1s ease;
+}
+
+.chosen {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.sub-nav {
+  width: 100%;
+  min-height: 250px;
+  max-height: 95vh;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.sub-nav::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width : 5px;  /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
   }
-  to {
-    transform: rotate(360deg);
+  .sub-nav::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius   : 10px;
+    background-color: #475164;
+    background-image: -webkit-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%,
+        transparent
+  );
   }
+  .sub-nav::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow   : inset 0 0 5px #d8e3e7;
+    background   : #ededed;
+    border-radius: 10px;
+  }
+
+.type {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.type-name {
+  font-size: 30px;
+  width: fit-content;
+}
+
+.type-item {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.color-item {
+  font-size: 20px;
+  width: 20px;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+
+.color-select {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  position: relative;
+}
+
+.color-select:hover .add{
+  opacity: 1;
+}
+
+.sub {
+  cursor: pointer;
+  margin: 0px;
+}
+
+.sub:hover
+{
+  background-color:#eee;
+  transition: background-color 0.5s ease;
+}
+
+.add {
+  opacity: 0;
+  cursor: pointer;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+.add:hover
+{
+  opacity: 1;
+  background-color:#eee;
+  transition: background-color 0.5s ease;
 }
