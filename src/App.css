@@ -49,9 +49,12 @@
 .sub-nav {
   width: 100%;
   min-height: 250px;
-  max-height: 95vh;
+  max-height: 80vh;
   overflow-y: auto;
   margin-top: 20px;
+  padding-bottom: 200px;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .sub-nav::-webkit-scrollbar {
@@ -82,8 +85,8 @@
   }
 
 .type {
-  margin-bottom: 20px;
-  width: 100%;
+  margin-right: 40px; 
+  width: fit-content;
 }
 
 .header {
@@ -102,6 +105,8 @@
 .type-item {
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-start;
+  width: fit-content;
 }
 
 .color-item {

@@ -13,33 +13,27 @@ import Fade from 'react-reveal/Fade';
 function App() {
   // 处理原始数据
   // 初始化颜色分类
-  const classify = ['红', '绿', '黄', '灰', '紫', '蓝', '棕', '白', '青', '橙', '粉', '褐', '肉色', '驼', '咖啡', '豆沙', '米色', '其他'];
+  const classify = ['红', '绿', '黄', '灰', '紫', '蓝', '棕', '白', '青', '橙', '粉', '褐', '肉色', '驼', '咖啡', '豆沙', '米色'];
+  const classify_other = [];
 
   let colorMap = new Map();
   colorList.forEach(item => {
+    let is_other = true;
     for (let i = 0; i < classify.length; i++) {
-      if ((item.name.indexOf(classify[i]) !== -1) || classify[i] === '其他') {
+      if (item.name.indexOf(classify[i]) !== -1) {
         const list = colorMap.get(classify[i]) || [];
         colorMap.set(classify[i], [...list, item]);
-        break;
+        is_other = false;
       }
     }
+    (is_other) && classify_other.push(item);
   });
-  var colorArray = Array.from(colorMap);
-  colorArray.sort((a, b) => b[1].length - a[1].length);
+  let colorArray = Array.from(colorMap).sort((a, b) => b[1].length - a[1].length);
+  colorArray.push(['其他', classify_other]);
 
   const [currentColor, setCurrentColor] = useState({
-    "CMYK": [
-      78,
-      0,
-      62,
-      0
-    ],
-    "RGB": [
-      93,
-      190,
-      138
-    ],
+    "CMYK": [78, 0, 62, 0],
+    "RGB": [93, 190, 138],
     "hex": "#5dbe8a",
     "name": "蔻梢绿",
     "pinyin": "koushaolv"
