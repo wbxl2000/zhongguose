@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "中国色 Color-Picker",
+  "name": "中国色 Color-Picker - 复刻版",
   "icons": [
     {
       "src": "favicon.ico",
