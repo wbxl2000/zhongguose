@@ -8,9 +8,7 @@
 
 本项目所有数据来源于 [中国色](http://zhongguose.com/)
 
-有任何使用上的建议，请提出 issue.
-
-如果想要更完整的色彩体验，请使用原版 [中国色](http://zhongguose.com/)
+有任何使用上的建议，欢迎提出 issue
  
 ## todo 
 
