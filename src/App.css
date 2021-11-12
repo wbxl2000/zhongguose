@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: row;
   font-family: 'SourceHanSerifCN-Medium';
+  animation: fadein 2s ease;
 }
 
 .half {
@@ -111,6 +112,11 @@
   margin-right: 20px;
 }
 
+@keyframes fadein {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 .type-item {
   display: flex;
   flex-flow: row wrap;
@@ -123,6 +129,7 @@
   width: 20px;
   margin: 10px 5px;
   cursor: pointer;
+  animation: fadein 1s ease-in-out;
 }
 
 .color-select {
