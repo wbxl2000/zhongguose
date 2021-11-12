@@ -90,11 +90,12 @@ function App() {
           <div className="type-name">
             {currentColor?.name}
           </div>
-          <div>
-            <Button variant="outlined" size="small" onClick={() => copyText(currentColor?.hex, 'Hex 复制成功 ' + currentColor?.hex)}>
-              {currentColor?.hex}
+          <div className="buttons">
+            <Button style={{ marginRight: '10px' }} variant="outlined" size="small" onClick={() => copyText(currentColor?.hex, 'Hex 复制成功 ' + currentColor?.hex)}>
+              {/* {currentColor?.hex} */}
+              Hex
             </Button>
-            <Button variant="outlined" size="small" onClick={() => copyText(currentColor?.RGB, 'RGB 复制成功 ' + currentColor?.RGB)}>
+            <Button style={{ marginRight: '10px' }} variant="outlined" size="small" onClick={() => copyText(currentColor?.RGB, 'RGB 复制成功 ' + currentColor?.RGB)}>
               RGB
             </Button>
             <Button variant="outlined" size="small" onClick={() => copyText(currentColor?.CMYK, 'CMYK 复制成功 ' + currentColor?.CMYK)}>
@@ -110,10 +111,10 @@ function App() {
         <div className="header">
           <div className="function-buttons">
             <div className="type-name"> 候选区域 </div>
-            <Button variant="text" onClick={() => copyText(JSON.stringify(chosenList), '所有候选颜色复制成功')}> 复制所有 </Button>
-            <Button variant="text" onClick={() => setChosenList([])}> 清空 </Button>
+            <Button style={{ marginRight: '10px' }} variant="text" size="small" onClick={() => copyText(JSON.stringify(chosenList), '所有候选颜色复制成功')}> 复制所有 </Button>
+            <Button variant="text" size="small" onClick={() => setChosenList([])}> 清空 </Button>
           </div>
-          <a href="https://github.com/wbxl2000/zhongguose" target="view_window"> <GitHub className="gitHub" /> </a>
+          <a href="https://github.com/wbxl2000/zhongguose" target="view_window" > <GitHub className="gitHub" /> </a>
         </div>
         <div className="chosen">
           {

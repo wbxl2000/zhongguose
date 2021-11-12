@@ -28,10 +28,11 @@
 
 .function-buttons {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  /* align-items: center; */
   margin-right: 5px;
+  width: fit-content;
 }
 
 .color-canvas {
@@ -98,14 +99,14 @@
 
 .header {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
 .type-name {
-  font-size: 30px;
+  font-size: 1.75rem;
   width: fit-content;
   margin-right: 20px;
 }
@@ -118,7 +119,7 @@
 }
 
 .color-item {
-  font-size: 20px;
+  font-size: 1.25rem;
   width: 20px;
   margin: 10px 5px;
   cursor: pointer;
