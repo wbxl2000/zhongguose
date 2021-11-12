@@ -45,6 +45,11 @@ function App() {
     console.log(item);
     setCurrentColor(item);
     if (!chosen) {
+      if (chosenList.find(element => element.name === item.name)) {
+        setMessage("已添加重复颜色");
+        setOpen(true);
+        setTimeout(() => setOpen(false), 1000);
+      }
       setChosenList([...chosenList, item]);
     }
   }
