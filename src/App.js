@@ -7,7 +7,6 @@ import Snackbar from '@material-ui/core/Snackbar';
 import Alert from '@material-ui/core/Alert';
 import Remove from '@material-ui/icons/Remove';
 import Add from '@material-ui/icons/Add';
-import GitHub from '@material-ui/icons/GitHub';
 import Fade from 'react-reveal/Fade';
 
 function App() {
@@ -114,7 +113,6 @@ function App() {
             <Button style={{ marginRight: '10px' }} variant="text" size="small" onClick={() => copyText(JSON.stringify(chosenList), '所有候选颜色复制成功')}> 复制所有 </Button>
             <Button variant="text" size="small" onClick={() => setChosenList([])}> 清空 </Button>
           </div>
-          <a href="https://github.com/wbxl2000/zhongguose" target="view_window" > <GitHub className="gitHub" /> </a>
         </div>
         <div className="chosen">
           {
