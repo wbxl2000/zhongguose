@@ -110,7 +110,7 @@ function App() {
         <div className="header">
           <div className="function-buttons">
             <div className="type-name"> 候选区域 </div>
-            <Button variant="text" style={{ marginLeft: '30px' }} onClick={() => copyText(JSON.stringify(chosenList), '所有候选颜色复制成功')}> 复制所有 </Button>
+            <Button variant="text" onClick={() => copyText(JSON.stringify(chosenList), '所有候选颜色复制成功')}> 复制所有 </Button>
             <Button variant="text" onClick={() => setChosenList([])}> 清空 </Button>
           </div>
           <a href="https://github.com/wbxl2000/zhongguose" target="view_window"> <GitHub className="gitHub" /> </a>
@@ -140,7 +140,9 @@ function App() {
               colorArray.map(colorPair => {
                 return (
                   <div className="type" key={colorPair[0]}>
-                    <div className="type-name"> {colorPair[0]} </div>
+                    <div className="type-header">
+                      <div className="type-name"> {colorPair[0]} </div>
+                    </div>
                     <div className="type-item">
                       {
                         colorPair[1].map(item => {

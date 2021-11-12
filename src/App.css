@@ -87,6 +87,13 @@
 .type {
   margin-right: 40px; 
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.type-header {
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .header {
@@ -100,6 +107,7 @@
 .type-name {
   font-size: 30px;
   width: fit-content;
+  margin-right: 20px;
 }
 
 .type-item {
