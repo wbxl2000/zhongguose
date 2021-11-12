@@ -7,7 +7,6 @@ import Snackbar from '@material-ui/core/Snackbar';
 import Alert from '@material-ui/core/Alert';
 import Remove from '@material-ui/icons/Remove';
 import Add from '@material-ui/icons/Add';
-import Fade from '@material-ui/core/Fade';
 
 function App() {
   // 处理原始数据
@@ -119,11 +118,11 @@ function App() {
             chosenList.map((item, index) => {
               return (
                 <div className="color-select" key={item.pinyin}>
-                    <div className="color-item" style={{
-                      backgroundColor: item.hex,
-                      height: '100px'
-                    }} onClick={() => colorClick(item, true)}>
-                    </div>
+                  <div className="color-item" style={{
+                    backgroundColor: item.hex,
+                    height: '100px'
+                  }} onClick={() => colorClick(item, true)}>
+                  </div>
                   <Remove className="sub" onClick={() => delColor(index)} />
                 </div>
               )
@@ -131,7 +130,6 @@ function App() {
           }
         </div>
         {/* 颜色导航区 */}
-        {/* <Fade in={true}> */}
         <div className="sub-nav">
           {
             colorArray.map(colorPair => {
@@ -161,7 +159,6 @@ function App() {
             })
           }
         </div>
-        {/* </Fade> */}
       </div>
     </div >
   );
